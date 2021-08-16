@@ -1,0 +1,39 @@
+def A_t():
+    base=float(input("Enter the base of the triangle:"))
+    height=float(input("Enter the height of the triangle:"))
+    area_t=float((base*height)*0.5)
+    print(f"Area of triangle is {area_t} sq.units")
+
+def A_c():
+    radius=float(input("Enter the radius of the circle:"))
+    area_c=(radius*radius)*3.14
+    print(f"Area of circle is {area_c} sq.units")
+
+def A_r():
+    length=float(input("Enter the length of the rectangle:"))
+    breadth=float(input("Enter the breadth of the rectangle:"))
+    area_r=float((length*breadth))
+    print(f"Area of triangle is {area_r} sq.units")
+
+def A_s():
+    side=float(input("Enter the side length of square:"))
+    area_s=float(side*side)
+    print(f"Area of square is {area_s} sq.units")
+    
+def main():
+    shape=input("Enter the shape of figure: ")
+    if(shape=="triangle"):
+        A_t()
+    elif(shape=="circle"):
+        A_c()
+    elif(shape=="rectangle"):
+        A_r()
+    elif(shape=="square"):
+        A_s()
+    else:
+        print("Invalid Shape")
+    print("Do you want to find area of another shape?(y/n)")
+    repeat=input(">")
+    if(repeat=="y"):
+        main()
+main()
